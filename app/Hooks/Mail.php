@@ -14,7 +14,7 @@ class Mail extends Hookable
     public function register()
     {
         Action::add('phpmailer_init', function ($phpmailer) {
-            $phpmailer->isSMTP();
+            $phpmailer->isSendmail();
             $phpmailer->Host = config('mail.host');
             $phpmailer->SMTPAuth = true;
             $phpmailer->Port = config('mail.port');

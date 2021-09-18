@@ -1,0 +1,248 @@
+.themosis__select {
+  &__body {
+    position: relative;
+  }
+
+  &__field {
+    position: relative;
+    display: inline-block;
+    border-radius: $radius-round-rectangle;
+    border: 1px solid $light-gray-600;
+    width: 100%;
+    min-width: auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .07);
+    box-sizing: border-box;
+    z-index: 3;
+    background-color: $white;
+  }
+
+  &__input {
+    position: absolute;
+    padding: $paddingV / 2;
+    border-radius: $radius-round-rectangle;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: $max;
+    max-width: 100%;
+    z-index: 2;
+    margin: 0;
+    box-shadow: none !important;
+    border: none !important;
+    background: none !important;
+    top: 0;
+  }
+
+  &__output {
+    position: relative;
+    display: inline-block;
+    padding: $paddingH / 2 $paddingV / 2;
+    min-height: 20px;
+    z-index: 3;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+  }
+
+  &__list {
+    position: absolute;
+    width: 100%;
+    padding: 9px 8px 8px;
+    background-color: $light-gray-200;
+    border: 1px solid $light-gray-600;
+    border-radius: $radius-round-rectangle;
+    top: 100%;
+    left: 0;
+    box-sizing: border-box;
+    margin-top: -6px;
+    display: none;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: scroll;
+  }
+
+  .icon__arrow__down {
+    position: absolute;
+    width: 12px;
+    height: 7px;
+    right: $paddingV / 2;
+    top: 13px;
+    z-index: 5;
+    transform: rotate(0deg);
+    transition: transform .3s ease-in-out;
+
+    path {
+      fill: $dark-gray-400;
+    }
+  }
+
+  &__tag {
+    display: inline-block;
+    padding: $paddingH / 4 10px $paddingH / 3;
+    background-color: $blue-medium-100;
+    color: darken($blue-medium-900, 20%);
+    margin: 0 6px 6px 0;
+    line-height: 1;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($blue-medium-100, 5%);
+      color: darken($blue-medium-900, 20%);
+    }
+
+    &:active {
+      background-color: lighten($blue-medium-100, 5%);
+      color: darken($blue-medium-900, 20%);
+    }
+
+    .icon__close {
+      margin-left: 10px;
+
+      path {
+        fill: $blue-medium-900;
+      }
+    }
+  }
+}
+
+.themosis__select.open {
+  .icon__arrow__down {
+    transform: rotate(-180deg);
+  }
+
+  .themosis__select__field {
+    z-index: 9999;
+  }
+
+  .themosis__select__output {
+    z-index: 9999;
+  }
+
+  .themosis__select__input {
+    z-index: 9998;
+  }
+
+  .themosis__select__list {
+    z-index: 9997;
+  }
+}
+
+.themosis.wp-editor {
+  .themosis__select.open {
+    .themosis__select__output {
+      min-height: 26px;
+    }
+  }
+}
+
+.themosis__select.multiple {
+  .themosis__select__field {
+    min-height: 34px;
+    padding: $paddingH / 2 26px $paddingH / 2 $paddingH / 2;
+    cursor: text;
+  }
+
+  .themosis__select__input {
+    position: static;
+    padding: 0;
+    width: 2.2em;
+    min-width: auto;
+    max-width: 100%;
+  }
+}
+
+.themosis__select.multiple.selection {
+  .themosis__select__field {
+    padding: $paddingH / 2 26px 0 $paddingH / 2;
+  }
+}
+
+.themosis__select__output.open {
+  min-height: 16px;
+}
+
+.themosis__select__output.default {
+  color: lighten($dark-gray-400, 30%);
+}
+
+.themosis__select__output.open.selection {
+  color: lighten($dark-gray-400, 30%);
+  min-height: 20px;
+}
+
+.themosis__select__output.multiple {
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  padding: 0;
+}
+
+.themosis__select__output.selection.multiple {
+  display: none;
+}
+
+.themosis__select__list.open {
+  display: block;
+}
+
+.themosis__select__group {
+  padding: 8px 0;
+  font-weight: 600;
+  color: $blue-medium-900;
+
+  &:not(:first-child) {
+    margin-top: $paddingV;
+  }
+}
+
+.themosis__select__item {
+  position: relative;
+  border-radius: $radius-round-rectangle;
+  padding: 8px 10px;
+  margin-bottom: 1px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $blue-medium-100;
+    color: darken($blue-medium-900, 20%);
+  }
+
+  .themosis__svg {
+    display: none;
+  }
+}
+
+.themosis__select__item.selected {
+  background-color: $green-medium-100;
+  color: darken($green-medium-900, 10%);
+  cursor: default;
+
+  &:hover {
+    background-color: $green-medium-100;
+    color: darken($green-medium-900, 10%);
+  }
+
+  .themosis__svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    margin-top: -5.5px;
+
+    path {
+      fill: $green-medium-900;
+    }
+  }
+}
+
+.themosis__select__item.notfound {
+  cursor: default;
+
+  &:hover {
+    background: none;
+    color: inherit;
+  }
+}

@@ -6,7 +6,7 @@ Thumbs.db
 /.vagrant
 
 ### Composer
-/vendor/
+#/vendor/
 
 ### IDE
 /.idea
@@ -19,9 +19,9 @@ cs_fixer*
 node_modules/
 
 ### WordPress
-/htdocs/cms/
-/htdocs/content/uploads/
-/htdocs/content/upgrade/
+#/htdocs/cms/
+#/htdocs/content/uploads/
+#/htdocs/content/upgrade/
 
 ### Environment Credentials
 .env

@@ -1,0 +1,96 @@
+{
+  "name": "themosis-framework",
+  "version": "2.0.5",
+  "description": "A WordPress framework.",
+  "directories": {
+    "test": "resources/assets/js/tests"
+  },
+  "scripts": {
+    "dev": "NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "production": "NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themosis/framework.git"
+  },
+  "keywords": [
+    "wordpress",
+    "framework",
+    "php"
+  ],
+  "author": "Julien Lambé",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/themosis/framework/issues"
+  },
+  "homepage": "https://github.com/themosis/framework",
+  "main": "resources/assets/js/index.js",
+  "devDependencies": {
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-typescript": "^7.6.0",
+    "@types/jest": "^23.3.14",
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
+    "husky": "^3.0.5",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "laravel-mix": "^5.0.0",
+    "lint-staged": "^9.3.0",
+    "ts-jest": "^24.1.0",
+    "ts-loader": "^4.5.0",
+    "typescript": "^3.6.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "@types/classnames": "^2.2.9",
+    "@types/react": "^16.9.2",
+    "@types/react-color": "^2.17.2",
+    "@types/react-dom": "^16.9.0",
+    "@types/react-sortable-hoc": "^0.6.5",
+    "@wordpress/components": "^4.0.0",
+    "@wordpress/rich-text": "^2.0.4",
+    "acorn": "^6.4.1",
+    "axios": "^0.18.1",
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.19",
+    "node-sass": "^4.12.0",
+    "react": "^16.9.0",
+    "react-color": "^2.17.3",
+    "react-dom": "^16.9.0",
+    "react-sortable-hoc": "^0.8.4",
+    "sass-loader": "^7.3.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ]
+  },
+  "lint-staged": {
+    "*.php": [
+      "php ./vendor/bin/php-cs-fixer fix --config .php_cs.dist",
+      "git add"
+    ]
+  }
+}
