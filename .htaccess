@@ -1,0 +1,6 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(.*)$ htdocs/$1 [L]
+</IfModule>
+
+php_value date.timezone 'Pacific/Auckland'
