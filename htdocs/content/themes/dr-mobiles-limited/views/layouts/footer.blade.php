@@ -5,7 +5,7 @@
         </svg>
     </div>
 </div>
-<div class="container px-[15px] mx-auto flex items-center justify-center flex-wrap">
+<div class="container pt-[100px] px-[15px] mx-auto flex items-center justify-center flex-wrap">
     <img class="object-contain object-center pb-[30px] pr-[30px]" style="cursor: pointer;" id="seal_2_certificate_image" src="https://www.crazydomains.co.nz/certification/seal/2/7d9696e2ff6346c19d2ad7c514de4fe01622857285/" onclick="if (document.getElementById('seal_2_certificate').style.display == 'none') document.getElementById('seal_2_certificate').style.display = ''; else document.getElementById('seal_2_certificate').style.display = 'none';"><div style="display:none;position: fixed; top: 50%; left: 50%; margin-left: -303px; margin-top: -313px;" id="seal_2_certificate"><a href="javascript:void(0);" onclick="javascript:document.getElementById('seal_2_certificate').style.display = 'none';" style=" font-size: 13px !important; top: -25px;  right: 607px; color: #484848;  opacity: 0.8;  float: right; font-weight: bold; position: relative;  line-height: 20px;  font-family: Verdana, Arial, sans-serif;" class="close">[×] close</a><iframe style="height:626px; width:607px; 690px; border: none; background: white; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); border-radius: 6px;" scrolling="no" src="https://www.crazydomains.co.nz/certification/certificate/?token=7d9696e2ff6346c19d2ad7c514de4fe01622857285"></iframe></div>
     <img class="object-contain object-center pb-[30px] pr-[30px]" src="//www.mysecuressls.com/images/seals/crazy_secure_01.png" border="0">
 </div>
