@@ -110,7 +110,7 @@ Ajax::listen('submit_contact_us_form', function () {
     }
 
     $to = array_column(get_field('contact_recipients', 'options'), 'email');
-    $subject = 'Contact Us Enquiry';
+    $subject = '[' . home_url() . '] Contact Us Enquiry';
     $headers = [];
     $headers[] = 'From: ' . $_POST['name'] . ' <' . $_POST['email'] . '>';
 
@@ -132,6 +132,15 @@ Ajax::listen('submit_contact_us_form', function () {
 
     http_response_code(200);
 
+    die();
+});
+
+Filter::add('wp_mail_content_type', function () {
+    return 'text/html';
+});
+
+Action::add('wp_mail_failed', function ($wp_error) {
+    echo "<pre>" . print_r($wp_error) . "</pre>";
     die();
 });
 
