@@ -1,0 +1,1 @@
+{"version":3,"file":"/js/app.js","mappings":";;;;;AAAAA,KAAK,CAAC,IAAD,CAAL,C","sources":["webpack://themosis-theme/./assets/js/app.js"],"sourcesContent":["alert('hi')\r\n"],"names":["alert"],"sourceRoot":""}

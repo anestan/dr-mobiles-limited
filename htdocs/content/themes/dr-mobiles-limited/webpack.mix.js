@@ -10,8 +10,55 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
+
+mix.webpackConfig({
+  devtool: 'source-map',
+});
+
+// mix.webpackConfig(webpack => {
+//   return {
+//     plugins: [
+//       new webpack.DefinePlugin({
+//         __VUE_OPTIONS_API__: true,
+//         __VUE_PROD_DEVTOOLS__: true,
+//       }),
+//     ],
+//   };
+// });
+
+mix.options({
+  processCssUrls: false,
+  postCss: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
+});
+
+// mix.browserSync({
+//   proxy: 'dr-mobiles-limited.test',
+//   files: [
+//     'assets/js/*.{js,vue}',
+//     'assets/js/**/*.{js,vue}',
+//     'assets/sass/*.scss',
+//     'assets/sass/**/*.scss',
+//     '*.php',
+//     '**/*.php',
+//   ],
+// });
+
 mix.setPublicPath('dist');
 
 mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
-    .sass('assets/sass/style.scss', 'dist/css/theme.css')
-    .sass('assets/sass/woocommerce.scss', 'dist/css');
+  .sass('assets/sass/style.scss', 'dist/css/theme.css')
+  .sass('assets/sass/woocommerce.scss', 'dist/css');
+
+mix.sass('assets/sass/app.scss', 'dist/css/app.css');
+mix.js('assets/js/app.js', 'dist/js/app.js');
+
+mix.sass('assets/sass/editor.scss', 'dist/css/editor.css');
+mix.js('assets/js/alpine.js', 'dist/js/alpine.js');
+
+mix.js('assets/js/front.js', 'dist/js/front.js');
+mix.sass('assets/sass/front.scss', 'dist/css/front.css');
+
+mix.js('assets/js/contact-us.js', 'dist/js/contact-us.js').vue();
