@@ -15,5 +15,15 @@ return [
         'after_widget' => '</div>',
         'before_title' => '<h2>',
         'after_title' => '</h2>',
+    ],
+    [
+        'name' => __('Shop sidebar', THEME_TD),
+        'id' => 'sidebar-shop',
+        'description' => __('Area of shop sidebar', THEME_TD),
+        'class' => 'custom',
+        'before_widget' => '<div>',
+        'after_widget' => '</div>',
+        'before_title' => '<h2>',
+        'after_title' => '</h2>',
     ]
 ];

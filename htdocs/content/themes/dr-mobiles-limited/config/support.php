@@ -10,7 +10,7 @@ return [
     // Post Thumbnails
     // @see https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
     /* ----------------------------------------------------------------------------------------------- */
-    'post-thumbnails' => ['post', 'page'],
+    'post-thumbnails' => ['post', 'page', 'product'],
 
     /* ----------------------------------------------------------------------------------------------- */
     // Post Formats
@@ -84,4 +84,9 @@ return [
     //    'admin-head-callback' => '',
     //    'admin-preview-callback' => '',
     //]
+
+    'woocommerce',
+    'wc-product-gallery-zoom',
+    'wc-product-gallery-lightbox',
+    'wc-product-gallery-slider'
 ];

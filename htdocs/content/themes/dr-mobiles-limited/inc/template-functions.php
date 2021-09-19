@@ -41,6 +41,10 @@ Action::add('after_setup_theme', function () {
     $GLOBALS['content_width'] = 640;
 }, 0);
 
+/**
+ * Custom theme configurations.
+ */
+
 Action::remove('wp_head', 'print_emoji_detection_script', 7);
 Action::remove('wp_print_styles', 'print_emoji_styles', 10);
 Action::remove('admin_print_scripts', 'print_emoji_detection_script', 10);
@@ -129,4 +133,29 @@ Ajax::listen('submit_contact_us_form', function () {
     http_response_code(200);
 
     die();
+});
+
+/**
+ * WooCommerce configurations.
+ */
+
+Action::remove('init', ['WC_Template_Loader', 'init'], 10);
+
+Filter::add('comments_template', ['WC_Template_Loader', 'comments_template_loader']);
+
+Filter::add('woocommerce_currency_symbol', function ($currency_symbol, $currency) {
+    switch ($currency) {
+        case 'NZD':
+            $currency_symbol = '$';
+            break;
+    }
+    return $currency_symbol;
+});
+
+Filter::add('loop_shop_per_page', function () {
+    return 12;
+});
+
+Action::add('wp_enqueue_scripts', function () {
+    wp_enqueue_script('wc-add-to-cart-variation');
 });
