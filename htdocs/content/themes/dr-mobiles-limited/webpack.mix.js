@@ -58,7 +58,7 @@ mix.js('assets/js/app.js', 'dist/js/app.js');
 mix.sass('assets/sass/editor.scss', 'dist/css/editor.css');
 mix.js('assets/js/alpine.js', 'dist/js/alpine.js');
 
-mix.js('assets/js/front.js', 'dist/js/front.js');
-mix.sass('assets/sass/front.scss', 'dist/css/front.css');
+mix.js('assets/js/covid.js', 'dist/js/covid.js');
+mix.sass('assets/sass/covid.scss', 'dist/css/covid.css');
 
 mix.js('assets/js/contact-us.js', 'dist/js/contact-us.js').vue();

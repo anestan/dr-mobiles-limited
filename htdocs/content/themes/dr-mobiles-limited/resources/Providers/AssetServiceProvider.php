@@ -31,6 +31,9 @@ class AssetServiceProvider extends ServiceProvider
         Asset::add('app-style', 'css/app.css', [], $theme->getHeader('version'))->to('front');
         Asset::add('app-script', 'js/app.js', [], $theme->getHeader('version'))->to('front');
 
+        Asset::add('covid-style', 'css/covid.css', [], $theme->getHeader('version'))->to('front');
+        Asset::add('covid-script', 'js/covid.js', [], $theme->getHeader('version'))->to('front');
+
         View::composer(['layouts.header'], function ($view) {
             global $wp;
             $current_url = home_url(add_query_arg([], $wp->request)) . '/';

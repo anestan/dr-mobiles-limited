@@ -1028,14 +1028,17 @@ object {
 .right-\[5px\]{
   right: 5px !important;
 }
+.bottom-0{
+  bottom: 0px !important;
+}
 .top-\[60\%\]{
   top: 60% !important;
 }
-.bottom-\[30px\]{
-  bottom: 30px !important;
+.bottom-\[15px\]{
+  bottom: 15px !important;
 }
-.bottom-0{
-  bottom: 0px !important;
+.bottom-\[5px\]{
+  bottom: 5px !important;
 }
 .z-\[9998\]{
   z-index: 9998 !important;
@@ -1073,21 +1076,14 @@ object {
   margin-top: 15px !important;
   margin-bottom: 15px !important;
 }
-.my-\[100px\]{
-  margin-top: 100px !important;
-  margin-bottom: 100px !important;
+.mb-\[50px\]{
+  margin-bottom: 50px !important;
 }
 .mr-\[15px\]{
   margin-right: 15px !important;
 }
-.mb-\[50px\]{
-  margin-bottom: 50px !important;
-}
 .mr-\[5px\]{
   margin-right: 5px !important;
-}
-.mb-\[30px\]{
-  margin-bottom: 30px !important;
 }
 .block{
   display: block !important;
@@ -1122,9 +1118,6 @@ object {
 .h-\[80\%\]{
   height: 80% !important;
 }
-.h-\[calc\(50vh-85px\)\]{
-  height: calc(50vh - 85px) !important;
-}
 .h-\[50vh\]{
   height: 50vh !important;
 }
@@ -1140,9 +1133,6 @@ object {
 .max-h-\[300px\]{
   max-height: 300px !important;
 }
-.max-h-\[50vh\]{
-  max-height: 50vh !important;
-}
 .w-\[50px\]{
   width: 50px !important;
 }
@@ -1151,9 +1141,6 @@ object {
 }
 .w-\[20px\]{
   width: 20px !important;
-}
-.w-\[30px\]{
-  width: 30px !important;
 }
 .w-\[10\%\]{
   width: 10% !important;
@@ -1246,16 +1233,6 @@ object {
   -moz-column-gap: 15px !important;
        column-gap: 15px !important;
 }
-.space-x-\[50px\] > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0 !important;
-  margin-right: calc(50px * var(--tw-space-x-reverse)) !important;
-  margin-left: calc(50px * calc(1 - var(--tw-space-x-reverse))) !important;
-}
-.space-y-\[50px\] > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0 !important;
-  margin-top: calc(50px * calc(1 - var(--tw-space-y-reverse))) !important;
-  margin-bottom: calc(50px * var(--tw-space-y-reverse)) !important;
-}
 .self-start{
   align-self: flex-start !important;
 }
@@ -1308,13 +1285,9 @@ object {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(243, 244, 246, var(--tw-bg-opacity)) !important;
 }
-.bg-dml-blue-200{
+.bg-covid-yellow{
   --tw-bg-opacity: 1 !important;
-  background-color: rgba(103, 103, 252, var(--tw-bg-opacity)) !important;
-}
-.bg-dml-blue-50{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(178, 178, 253, var(--tw-bg-opacity)) !important;
+  background-color: rgba(255, 204, 0, var(--tw-bg-opacity)) !important;
 }
 .bg-opacity-\[75\%\]{
   --tw-bg-opacity: 75% !important;
@@ -1385,6 +1358,10 @@ object {
   padding-left: 90px !important;
   padding-right: 90px !important;
 }
+.py-\[50px\]{
+  padding-top: 50px !important;
+  padding-bottom: 50px !important;
+}
 .pb-\[30px\]{
   padding-bottom: 30px !important;
 }
@@ -1394,8 +1371,8 @@ object {
 .pl-\[15px\]{
   padding-left: 15px !important;
 }
-.pt-\[85px\]{
-  padding-top: 85px !important;
+.pb-\[90px\]{
+  padding-bottom: 90px !important;
 }
 .pb-\[50px\]{
   padding-bottom: 50px !important;
@@ -1408,9 +1385,6 @@ object {
 }
 .pt-\[5px\]{
   padding-top: 5px !important;
-}
-.pr-\[15px\]{
-  padding-right: 15px !important;
 }
 .text-left{
   text-align: left !important;
@@ -1601,9 +1575,6 @@ object {
   .md\:mb-\[100px\]{
     margin-bottom: 100px !important;
   }
-  .md\:mb-\[50px\]{
-    margin-bottom: 50px !important;
-  }
   .md\:h-\[70vh\]{
     height: 70vh !important;
   }
@@ -1689,10 +1660,6 @@ object {
   .xl\:gap-x-\[30px\]{
     -moz-column-gap: 30px !important;
          column-gap: 30px !important;
-  }
-  .xl\:px-\[50px\]{
-    padding-left: 50px !important;
-    padding-right: 50px !important;
   }
   .xl\:pl-\[5px\]{
     padding-left: 5px !important;

@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <section class="bg-cover bg-no-repeat bg-top h-[50vh] md:h-[70vh] relative" style="background-image:url({{ get_field('banner_1')['url'] }});">
+    <section class="bg-cover bg-no-repeat bg-top h-[50vh] md:h-[70vh] mb-[50px] md:mb-[100px] relative" style="background-image:url({{ get_field('banner_1')['url'] }});">
         <div class="bg-dml-blue bg-opacity-[50%] absolute inset-0"></div>
         <div class="absolute top-[60%] left-0 right-0 transform translate-y-[-60%]">
             <div class="container px-[15px] mx-auto">
@@ -9,19 +9,6 @@
                 <p class="font-primary text-[16px] md:text-[20px] text-white m-0">{{ get_field('content_1') }}</p>
             </div>
         </div>
-    </section>
-    <section class="h-[50vh] mb-[50px] md:mb-[100px] relative">
-        <div class="swiper swiper-covid h-full">
-            <div class="swiper-wrapper h-full">
-                <div class="swiper-slide swiper-lazy flex justify-center h-full">
-                    <img src="{{ get_field('covid_image_1', 'options')['url'] }}" alt="{{  get_field('covid_image_1', 'options')['alt'] }}" loading="lazy" class="object-contain object-center h-full shadow-md">
-                </div>
-                <div class="swiper-slide swiper-lazy flex justify-center h-full">
-                    <img src="{{ get_field('covid_image_2', 'options')['url'] }}" alt="{{  get_field('covid_image_2', 'options')['alt'] }}" loading="lazy" class="object-contain object-center h-full shadow-md">
-                </div>
-            </div>
-        </div>
-        <div class="swiper-pagination absolute z-[10] bottom-0"></div>
     </section>
     <section class="container pb-[50px] md:pb-[100px] px-[15px] mx-auto">
         <h2 class="font-primary text-[30px] leading-[30px] text-black  pb-[15px] m-0">{{ get_field('title_2') }}</h2>

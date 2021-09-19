@@ -17,9 +17,6 @@ Route::fallback(function () {
 });
 
 Route::any('front', function () use ($theme) {
-    Asset::add('front-style', 'css/front.css', [], $theme->getHeader('version'))->to('front');
-    Asset::add('front-script', 'js/front.js', [], $theme->getHeader('version'))->to('front');
-
     return view('pages.front');
 });
 
