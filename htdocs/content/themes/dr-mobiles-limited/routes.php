@@ -62,27 +62,15 @@ Route::any('page', [
     }
 ]);
 
-Route::any('page', function () {
-    return view('pages.default');
+Route::any('shop', function () {
+    return view('shop.archive');
 });
 
-//Route::any('search', function () {
-//    return view('pages.search');
-//});
+Route::any('product_category', function () {
+    return view('shop.archive');
+});
 
-//Route::any('single', function () {
-//    return view('blog.single');
-//});
-
-//Route::any('blog', function () {
-//    return view('blog.archive');
-//});
-
-//Route::any('archive', function () {
-//    return view('blog.archive');
-//});
-
-Route::any('shop', function () {
+Route::any('product_tag', function () {
     return view('shop.archive');
 });
 
@@ -102,14 +90,26 @@ Route::any('account', function () {
     return view('shop.account');
 });
 
-Route::any('product_category', function () {
-    return view('shop.product-category');
-});
-
-Route::any('product_tag', function () {
-    return view('shop.product-tag');
-});
-
 Route::any('wc_endpoint', function () {
     return view('shop.wc-endpoint');
 });
+
+//Route::any('page', function () {
+//    return view('pages.default');
+//});
+
+//Route::any('search', function () {
+//    return view('pages.search');
+//});
+
+//Route::any('single', function () {
+//    return view('blog.single');
+//});
+
+//Route::any('blog', function () {
+//    return view('blog.archive');
+//});
+
+//Route::any('archive', function () {
+//    return view('blog.archive');
+//});

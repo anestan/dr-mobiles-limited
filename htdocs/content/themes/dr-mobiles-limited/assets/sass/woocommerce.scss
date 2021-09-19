@@ -46,3 +46,44 @@ $woocommerce__color-info: #3D9CD2;
  * WooCommerce widgets
  */
 @import "shop/widgets";
+
+//.woocommerce {
+//  @apply container px-[15px] mx-auto;
+//
+//  .woocommerce-breadcrumb {
+//    @apply my-[30px] mx-0;
+//  }
+//
+//  .woocommerce-products-header__title {
+//    @apply m-0 pb-[30px];
+//  }
+//
+//  .products ul,
+//  ul.products {
+//    @apply w-full;
+//  }
+//
+//  ul.products li.product {
+//    .onsale {
+//      @apply w-[50px] h-[50px];
+//    }
+//
+//    a img {
+//      @apply mb-0;
+//    }
+//
+//    h3,
+//    .woocommerce-loop-product__title,
+//    .woocommerce-loop-category__title {
+//      @apply text-center;
+//    }
+//
+//    .price {
+//      @apply text-center;
+//    }
+//
+//    .button {
+//      @apply text-center rounded-none;
+//    }
+//  }
+//}

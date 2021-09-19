@@ -48,17 +48,20 @@ mix.options({
 
 mix.setPublicPath('dist');
 
-mix.js('assets/js/theme.js', 'dist/js/theme.min.js')
-  .sass('assets/sass/style.scss', 'dist/css/theme.css')
-  .sass('assets/sass/woocommerce.scss', 'dist/css');
+mix.js('assets/js/theme.js', 'dist/js/theme.min.js');
+mix.sass('assets/sass/style.scss', 'dist/css/theme.css').sourceMaps();
+mix.sass('assets/sass/woocommerce.scss', 'dist/css/woocommerce.css').sourceMaps();
 
-mix.sass('assets/sass/app.scss', 'dist/css/app.css');
+mix.sass('assets/sass/app.scss', 'dist/css/app.css').sourceMaps();
 mix.js('assets/js/app.js', 'dist/js/app.js');
 
-mix.sass('assets/sass/editor.scss', 'dist/css/editor.css');
+mix.sass('assets/sass/editor.scss', 'dist/css/editor.css').sourceMaps();
 mix.js('assets/js/alpine.js', 'dist/js/alpine.js');
 
 mix.js('assets/js/covid.js', 'dist/js/covid.js');
-mix.sass('assets/sass/covid.scss', 'dist/css/covid.css');
+mix.sass('assets/sass/covid.scss', 'dist/css/covid.css').sourceMaps();
 
-mix.js('assets/js/contact-us.js', 'dist/js/contact-us.js').vue();
+mix.js('assets/js/contact-us.js', 'dist/js/contact-us.js').vue({
+  __VUE_OPTIONS_API__: true,
+  __VUE_PROD_DEVTOOLS__: true
+});

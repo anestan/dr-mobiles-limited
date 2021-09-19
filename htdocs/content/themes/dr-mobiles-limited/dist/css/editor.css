@@ -375,7 +375,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
@@ -1028,17 +1028,11 @@ object {
 .right-\[5px\]{
   right: 5px !important;
 }
-.bottom-0{
-  bottom: 0px !important;
+.bottom-\[5px\]{
+  bottom: 5px !important;
 }
 .top-\[60\%\]{
   top: 60% !important;
-}
-.bottom-\[15px\]{
-  bottom: 15px !important;
-}
-.bottom-\[5px\]{
-  bottom: 5px !important;
 }
 .z-\[9998\]{
   z-index: 9998 !important;
@@ -1058,12 +1052,6 @@ object {
 .col-span-4{
   grid-column: span 4 / span 4 !important;
 }
-.col-span-3{
-  grid-column: span 3 / span 3 !important;
-}
-.col-span-9{
-  grid-column: span 9 / span 9 !important;
-}
 .m-\[15px\]{
   margin: 15px !important;
 }
@@ -1081,6 +1069,10 @@ object {
 .my-\[15px\]{
   margin-top: 15px !important;
   margin-bottom: 15px !important;
+}
+.my-\[30px\]{
+  margin-top: 30px !important;
+  margin-bottom: 30px !important;
 }
 .mb-\[50px\]{
   margin-bottom: 50px !important;
@@ -1287,13 +1279,13 @@ object {
   --tw-bg-opacity: 1 !important;
   background-color: rgba(107, 114, 128, var(--tw-bg-opacity)) !important;
 }
-.bg-gray-100{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(243, 244, 246, var(--tw-bg-opacity)) !important;
-}
 .bg-covid-yellow{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(255, 204, 0, var(--tw-bg-opacity)) !important;
+}
+.bg-gray-100{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(243, 244, 246, var(--tw-bg-opacity)) !important;
 }
 .bg-opacity-\[75\%\]{
   --tw-bg-opacity: 75% !important;
@@ -1368,6 +1360,9 @@ object {
   padding-top: 50px !important;
   padding-bottom: 50px !important;
 }
+.pt-\[100px\]{
+  padding-top: 100px !important;
+}
 .pb-\[30px\]{
   padding-bottom: 30px !important;
 }
@@ -1392,11 +1387,8 @@ object {
 .pt-\[5px\]{
   padding-top: 5px !important;
 }
-.pt-\[30px\]{
-  padding-top: 30px !important;
-}
-.pt-\[100px\]{
-  padding-top: 100px !important;
+.pt-\[50px\]{
+  padding-top: 50px !important;
 }
 .text-left{
   text-align: left !important;
@@ -1686,3 +1678,5 @@ object {
     line-height: 30px !important;
   }
 }
+
+/*# sourceMappingURL=editor.css.map*/
